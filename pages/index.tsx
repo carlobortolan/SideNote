@@ -1,10 +1,10 @@
 import { NextPageContext } from "next";
-import { getSession, signOut } from "next-auth/react";
+import { getSession } from "next-auth/react";
 import useCurrentUser from "@/hooks/useCurrentUser";
+import Navbar from "@/components/Navbar";
 
 export async function getServerSideProps(context: NextPageContext) {
-  const session = await getSession(context);
-  if (!session) {
+  if (!(await getSession(context))) {
     return {
       redirect: {
         destination: "/auth",
@@ -12,9 +12,7 @@ export async function getServerSideProps(context: NextPageContext) {
       },
     };
   }
-  return {
-    props: {},
-  };
+  return { props: {} };
 }
 
 export default function Home() {
@@ -22,11 +20,7 @@ export default function Home() {
 
   return (
     <>
-      <h1 className="text-2xl text-green-500">SideNote</h1>
-      <p className="text-white">Logged in as: {user?.email}</p>
-      <button className="h10 w-full bg-white" onClick={() => signOut()}>
-        Sign Out
-      </button>
+      <Navbar />
     </>
   );
 }
