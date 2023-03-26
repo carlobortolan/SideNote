@@ -12,10 +12,10 @@ const Input: React.FC<InputProps> = ({ id, onChange, value, label, type }) => {
   return (
     <div className="relative">
       <input
+        id={id}
         onChange={onChange}
         value={value}
         type={type}
-        id={id}
         className="
         block
         rounded-md
