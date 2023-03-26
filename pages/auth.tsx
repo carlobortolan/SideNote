@@ -11,7 +11,7 @@ const Auth = () => {
   const router = useRouter();
 
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
   const [variant, setVariant] = useState("login");
@@ -40,7 +40,7 @@ const Auth = () => {
     try {
       const res = await axios.post("/api/register", {
         email,
-        username,
+        name,
         password,
       });
 
@@ -48,7 +48,7 @@ const Auth = () => {
     } catch (err) {
       console.log(err);
     }
-  }, [email, username, password, login]);
+  }, [email, name, password, login]);
 
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
@@ -64,14 +64,14 @@ const Auth = () => {
             <div className="flex flex-col gap-4">
               {variant === "register" && (
                 <Input
-                id="username"
-                onChange={(event: any) => {
-                  setUsername(event.target.value);
-                }}
-                value={username}
-                label="Username"
-              />
-            )}
+                  id="name"
+                  onChange={(event: any) => {
+                    setName(event.target.value);
+                  }}
+                  value={name}
+                  label="Name"
+                />
+              )}
               <Input
                 id="email"
                 onChange={(event: any) => {

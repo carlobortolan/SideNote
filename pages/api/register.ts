@@ -11,12 +11,12 @@ export default async function handler(
   }
 
   try {
-    const { email, username, password } = req.body;
+    const { email, name, password } = req.body;
 
-    if (!email || !password || !username) {
+    if (!email || !password || !name) {
       return res
         .status(400)
-        .json({ error: "Missing email, username or password" });
+        .json({ error: "Missing email, name or password" });
     }
 
     const existingUser = await prismadb.user.findUnique({
@@ -32,7 +32,7 @@ export default async function handler(
     const user = await prismadb.user.create({
       data: {
         email,
-        username,
+        name,
         hashedPassword,
         image: "",
         emailVerified: new Date(),
