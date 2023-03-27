@@ -1,6 +1,6 @@
 # [SideNote](sidenote.vercel.app)
 
-** A Netflix-like web application to stream videos and concerts for free.**
+**A Netflix-like web application to stream videos and concerts for free.**
 
 > __NOTE__: __THIS PROJECT IS STILL UNDER DEVELOPMENT.__
 
