@@ -4,7 +4,29 @@
 
 > __NOTE__: __THIS PROJECT IS STILL UNDER DEVELOPMENT.__
 
-This is a web application similar to Netflix built using the [React](https://react.dev/) framework, [Tailwind CSS](https://tailwindcss.com/), [Next.js](https://nextjs.org/), [Prisma](https://www.prisma.io/), [MongoDB](https://www.mongodb.com/), and [NextAuth](https://next-auth.js.org/). The application supports OAuth authentication, allowing users to sign in using their Google or GitHub accounts.
+This project is a web application similar to Netflix, built using modern technologies such as the [React](https://react.dev/) library, [Tailwind CSS](https://tailwindcss.com/), [Next.js](https://nextjs.org/), [NextAuth](https://next-auth.js.org/), [Prisma](https://www.prisma.io/), and [MongoDB](https://www.mongodb.com/).
+
+The application offers OAuth2.0 authentication, allowing users to sign in using their Google or GitHub accounts.
+
+
+## FEATURES
+
+> __NOTE__: _Some of these features have not been implemented yet._
+
+SideNote has the following features:
+
+- User authentication with OAuth: Users can sign in using their Google, or GitHub accounts.
+
+- Browse movies: Users can browse a catalog of movies and view detailed information about each title, including a synopsis and duration.
+  
+- Search for titles: Users can search for movies and TV shows by title or genre.
+
+- Add titles to their watchlist: Users can add titles to their watchlist to keep track of titles they want to watch later.
+    
+- View recommended titles: Users can view a list of recommended titles based on their watch history and ratings.
+
+- Manage profile: Users can update their profile information, including their name and profile picture.
+
 
 
 ## INSTALLATION
@@ -40,21 +62,6 @@ To get started with the project, you can follow these steps:
 
 6. Open the application in your browser at http://localhost:3000.
 
-## FEATURES
-
-SideNote has the following features:
-
-- User authentication with OAuth: Users can sign in using their Google, or GitHub accounts.
-
-- Browse movies and TV shows: Users can browse a catalog of movies and TV shows and view detailed information about each title, including a synopsis and duration.
-  
-- Search for titles: Users can search for movies and TV shows by title or genre.
-
-- Add titles to their watchlist: Users can add titles to their watchlist to keep track of titles they want to watch later.
-    
-- View recommended titles: Users can view a list of recommended titles based on their watch history and ratings.
-
-- Manage profile: Users can update their profile information, including their name and profile picture.
 
 ## TECHNOLOGIES USED
 
