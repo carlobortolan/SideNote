@@ -4,6 +4,7 @@ import AccountMenu from "./AccountMenu";
 import { BsChevronDown, BsSearch, BsBell } from "react-icons/bs";
 import { useCallback, useEffect, useState } from "react";
 import useCurrentUser from "@/hooks/useCurrentUser";
+import router from "next/router";
 
 const TOP_OFFSET = 66;
 
@@ -40,14 +41,43 @@ const Navbar = () => {
           showBackground ? "bg-zinc-900 bg-opacity-90" : ""
         }`}
       >
-        <img className="h-7 lg:h-7" src="images/logo.png" alt="Logo"></img>
+        <img
+          className="h-7 lg:h-7 cursor-pointer transition hover:scale-105"
+          src="../images/logo.png"
+          alt="Logo"
+          onClick={() => router.push(`/`)}
+        ></img>
         <div className="flex-row ml-8 gap-7 hidden lg:flex">
-          <NavbarItem label="Home" />
-          <NavbarItem label="Series" />
-          <NavbarItem label="Films" />
-          <NavbarItem label="New & Popular" />
-          <NavbarItem label="My List" />
-          <NavbarItem label="Browse by languages" />
+          <div
+            onClick={() => router.push(`/`)}
+            className="cursor-pointer transition"
+          >
+            <NavbarItem label="Home" />
+          </div>
+          <div
+            onClick={() => router.push(`/browse/movies`)}
+            className="cursor-pointer transition"
+          >
+            <NavbarItem label="Films" />
+          </div>
+          <div
+            onClick={() => router.push(`/browse/latest`)}
+            className="cursor-pointer transition"
+          >
+            <NavbarItem label="New & Popular" />
+          </div>
+          <div
+            onClick={() => router.push(`/browse/my-list`)}
+            className="cursor-pointer transition"
+          >
+            <NavbarItem label="My List" />
+          </div>
+          <div
+            onClick={() => router.push(`/browse/category`)}
+            className="cursor-pointer transition"
+          >
+            <NavbarItem label="Browse by category" />
+          </div>
         </div>
         <div
           onClick={toggleMobileMenu}
@@ -63,7 +93,7 @@ const Navbar = () => {
         </div>
         <div className="flex flex-row ml-auto gap-7 items-center">
           <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
-            <BsSearch />
+            <BsSearch onClick={() => router.push(`/search`)} />
           </div>
           <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
             <BsBell />

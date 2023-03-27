@@ -3,6 +3,7 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import react, { useCallback } from "react";
 import PlayButton from "./PlayButton";
 import useInfoModal from "@/hooks/useInfoModal";
+import router from "next/router";
 
 const Billboard = () => {
   const { data } = useBillboard();
@@ -22,7 +23,10 @@ const Billboard = () => {
         src={data?.videoUrl}
       ></video>
       <div className="absolute top-[30%] md:top-[40%] ml-4 md:ml-16">
-        <p className="text-white text-1xl md:text-5xl h-full w-[50%] lg:text-6xl font-bold drop-shadow-xl">
+        <p
+          onClick={() => router.push(`/watch/${data?.id}`)}
+          className="text-white text-1xl md:text-5xl h-full w-[50%] lg:text-6xl font-bold drop-shadow-xl cursor-pointer transition"
+        >
           {data?.title}
         </p>
         <p className="text-white text-[8px] md:text-lg mt-3 md:mt-8 w-[90%] md:w-[80%] lg:w-[50%] drop-shadow-xl">

@@ -24,6 +24,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         <img
           className="cursor-pointer object-cover transition duration shadow-xl rounded-t-md w-full h-[12vw]"
           src={data.thumbnailUrl}
+          onClick={() => router.push(`/watch/${data?.id}`)}
           alt={"Thumbnail"}
         />
         <div className="z-10 bg-zinc-800 p-2 lg:p-4 absolute w-full transition shadow-md rounded-b-md">
@@ -47,14 +48,18 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
               />
             </div>
           </div>
-          <p className="text-green-400 font-semibold mt-4">
-            New <span className="text-white">2023</span>
-          </p>
           <div className="flex flex-row mt-4 gap-2 items-center">
-            <p className="text-white text-[10px] lg:text-sm">{data.duration}</p>
+            <p className="text-white text-[10px] font-bold lg:text-sm">
+              {data.title}
+            </p>
           </div>
           <div className="flex flex-row mt-4 gap-2 items-center">
-            <p className="text-white text-[10px] lg:text-sm">{data.genre}</p>
+            <p className="text-white text-[10px] lg:text-sm">{data.genre}</p>|
+            <p className="text-white text-[10px] lg:text-sm">{data.duration}</p>
+            |
+            <p className="text-green-400 font-semibold">
+              New <span className="text-white"> 2023</span>
+            </p>
           </div>
         </div>
       </div>
