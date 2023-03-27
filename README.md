@@ -1,8 +1,8 @@
 # [SideNote](sidenote.vercel.app)
 
-> __NOTE__: __THIS PROJECT IS STILL UNDER DEVELOPMENT.__
-
 Netflix-like web application to stream videos and concerts for free.
+
+> __NOTE__: __THIS PROJECT IS STILL UNDER DEVELOPMENT.__
 
 This is a web application similar to Netflix built using the [React](https://react.dev/) framework, [Tailwind CSS](https://tailwindcss.com/), [Next.js](https://nextjs.org/), [Prisma](https://www.prisma.io/), [MongoDB](https://www.mongodb.com/), and [NextAuth](https://next-auth.js.org/). The application supports OAuth authentication, allowing users to sign in using their Google or GitHub accounts.
 
