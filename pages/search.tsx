@@ -2,7 +2,7 @@ import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 import Navbar from "@/components/Navbar";
 import MovieList from "@/components/MovieList";
-import useFavorites from "@/hooks/useFavorites";
+import useCategory from "@/hooks/useCategory";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
 
@@ -19,14 +19,14 @@ export async function getServerSideProps(context: NextPageContext) {
 }
 
 export default function Home() {
-  const { data: japanese = [] } = useFavorites("japanese");
-  const { data: hollywood = [] } = useFavorites("hollywood");
-  const { data: classics = [] } = useFavorites("classics");
-  const { data: action = [] } = useFavorites("action");
-  const { data: romance = [] } = useFavorites("romance");
-  const { data: drama = [] } = useFavorites("drama");
-  const { data: comedy = [] } = useFavorites("comedy");
-  const { data: sciencefiction = [] } = useFavorites("sciencefiction");
+  const { data: japanese = [] } = useCategory("japanese");
+  const { data: hollywood = [] } = useCategory("hollywood");
+  const { data: classics = [] } = useCategory("classics");
+  const { data: action = [] } = useCategory("action");
+  const { data: romance = [] } = useCategory("romance");
+  const { data: drama = [] } = useCategory("drama");
+  const { data: comedy = [] } = useCategory("comedy");
+  const { data: sciencefiction = [] } = useCategory("sciencefiction");
   const { isOpen, closeModal } = useInfoModal();
 
   return (
