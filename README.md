@@ -1,8 +1,10 @@
 # [SideNote](sidenote.vercel.app)
 
+> __NOTE__: __THIS PROJECT IS STILL UNDER DEVELOPMENT.__
+
 Netflix-like web application to stream videos and concerts for free.
 
-This is a web application similar to Netflix built using the React framework, Tailwind CSS, Next.js, Prisma, MongoDB, and NextAuth. The application supports OAuth authentication, allowing users to sign in using their Google or GitHub accounts.
+This is a web application similar to Netflix built using the [React](https://react.dev/) framework, [Tailwind CSS](https://tailwindcss.com/), [Next.js](https://nextjs.org/), [Prisma](https://www.prisma.io/), [MongoDB](https://www.mongodb.com/), and [NextAuth](https://next-auth.js.org/). The application supports OAuth authentication, allowing users to sign in using their Google or GitHub accounts.
 
 
 ## INSTALLATION
@@ -56,17 +58,17 @@ SideNote has the following features:
 
 ## TECHNOLOGIES USED
 
-    - React: A JavaScript library for building user interfaces.
+- [React](https://react.dev/): A JavaScript library for building user interfaces.
     
-    - Tailwind CSS: A utility-first CSS framework for building responsive designs.
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework for building responsive designs.
     
-    - Next.js: A framework for building server-side rendered React applications.
+- [Next.js](https://nextjs.org/): A framework for building server-side rendered React applications.
     
-    - Prisma: A database toolkit for building scalable and type-safe databases.
+- [Prisma](https://www.prisma.io/): A database toolkit for building scalable and type-safe databases.
     
-    - MongoDB: A document-oriented NoSQL database.
+- [MongoDB](https://www.mongodb.com/): A document-oriented NoSQL database.
     
-    - NextAuth: An authentication library for Next.js applications that supports OAuth.
+- [NextAuth](https://next-auth.js.org/): An authentication library for Next.js applications that supports OAuth.
 
 ## CONTRIBUTING
 
