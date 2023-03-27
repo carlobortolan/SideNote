@@ -11,7 +11,7 @@ To get started with the project, you can follow these steps:
 
 1. Clone the repository:
     ```
-    git clone https://github.com/carlobortolan/sidenote.git
+    git clone https://github.com/carlobortolan/SideNote.git
     ```
 2. Navigate to the project directory:
     ```
