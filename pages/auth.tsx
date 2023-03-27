@@ -24,7 +24,7 @@ const Auth = () => {
       await signIn("credentials", {
         email,
         password,
-        callbackUrl: "/profile",
+        callbackUrl: "/profiles",
       });
     } catch (err) {
       console.log(err);
@@ -88,7 +88,7 @@ const Auth = () => {
             </div>
             <button
               onClick={variant === "login" ? login : register}
-              className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700 transition"
+              className="bg-blue-600 py-3 text-white rounded-md w-full mt-10 hover:bg-blue-700 transition"
             >
               {variant === "login" ? "Login" : "Create Account"}
             </button>

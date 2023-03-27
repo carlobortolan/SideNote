@@ -34,7 +34,7 @@ export default async function handler(
         email,
         name,
         hashedPassword,
-        image: "",
+        // image: "",
         emailVerified: new Date(),
       },
     });
