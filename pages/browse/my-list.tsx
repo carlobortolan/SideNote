@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import MovieList from "@/components/MovieList";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
-import useCategory from "@/hooks/useCategory";
 import useFavorites from "@/hooks/useFavorites";
 
 export async function getServerSideProps(context: NextPageContext) {
