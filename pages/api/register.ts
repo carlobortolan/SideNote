@@ -14,9 +14,7 @@ export default async function handler(
     const { email, name, password } = req.body;
 
     if (!email || !password || !name) {
-      return res
-        .status(400)
-        .json({ error: "Missing email, name or password" });
+      return res.status(400).json({ error: "Missing email, name or password" });
     }
 
     const existingUser = await prismadb.user.findUnique({
