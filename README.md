@@ -1,4 +1,4 @@
-# [SideNote](sidenote.vercel.app)
+# [SideNote](https://sidenote.vercel.app/)
 
 **A Netflix-like web application to stream videos and concerts for free.**
 
