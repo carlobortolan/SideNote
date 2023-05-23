@@ -69,4 +69,8 @@ model Movie {
   thumbnailUrl String
   genre        String
   duration     String
+  directed_by  String[]
+  written_by   String[]
+  starring     String[]
+  release_year String
 }

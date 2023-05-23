@@ -63,14 +63,37 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
               </div>
             </div>
           </div>
-          <div className="px-12 py-8">
+          <div className="px-12 pt-8">
             <div className="flex flex-row items-center gap-2 mb-8">
-              <p className="text-green-400 font-semibold text-lg">New</p>
-              <p className="text-white text-lg">{data?.duration}</p>
-              <p className="text-white text-lg">{data?.genre}</p>
+              <p className="text-green-400 font-semibold text-lg">
+                {data?.release_year}
+              </p>
+              <p className="text-white text-lg">
+                {data?.duration + " minutes"}
+              </p>
+              <p className="text-white text-lg font-semibold italic">
+                {data?.genre}
+              </p>
             </div>
             <p className="text-white text-lg">{data?.description}</p>
           </div>
+          <div className="px-12 py-8">
+            {data?.directed_by?.[0] ? (
+             <p className="text-white text-lg font-semibold">
+             Directed by: <span className="text-md font-light italic"> {data.directed_by.join(", ")}</span>
+           </p>
+         ) : null}
+            {data?.written_by?.[0] ? (
+             <p className="text-white text-lg font-semibold">
+             Written by: <span className="text-md font-light italic"> {data.written_by.join(", ")}</span>
+           </p>
+         ) : null}
+            {data?.starring?.[0] ? (
+             <p className="text-white text-lg font-semibold">
+                Starring: <span className="text-md font-light italic"> {data.starring.join(", ")}</span>
+              </p>
+            ) : null}
+            </div>
         </div>
       </div>
     </div>
