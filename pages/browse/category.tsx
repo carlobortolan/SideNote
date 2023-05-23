@@ -1,7 +1,7 @@
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 import Navbar from "@/components/Navbar";
-import MovieList from "@/components/MovieList";
+import TrailerList from "@/components/TrailerList";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
 import useCategory from "@/hooks/useCategory";
@@ -36,21 +36,21 @@ export default function Home() {
 
       <div className="pb-40 ml-8">
         <br id = "Anime" className="" />
-        <MovieList title="Anime" data={anime} /> <br />
+        <TrailerList title="Anime" data={anime} /> <br />
         <br id = "Adventure" className="" />
-        <MovieList title="Adventure" data={adventure} /> <br />
+        <TrailerList title="Adventure" data={adventure} /> <br />
         <br id = "Action" className="mt-10" />
-        <MovieList title="Action" data={action} />
+        <TrailerList title="Action" data={action} />
         <br id = "Crime" className="mt-10" />
-        <MovieList title="Crime" data={crime} />
+        <TrailerList title="Crime" data={crime} />
         <br id = "Drama" className="mt-10" />
-        <MovieList title="Drama" data={drama} />
+        <TrailerList title="Drama" data={drama} />
         <br id = "Romance" className="mt-10" />
-        <MovieList title="Romance" data={romance} />
+        <TrailerList title="Romance" data={romance} />
         <br id = "Science-Fiction" className="mt-10" />
-        <MovieList title="Science-Fiction" data={sciencefiction} />
+        <TrailerList title="Science-Fiction" data={sciencefiction} />
         <br id = "Thriller" className="mt-10" />
-        <MovieList title="Thriller" data={thriller} />
+        <TrailerList title="Thriller" data={thriller} />
       </div>
     </>
   );

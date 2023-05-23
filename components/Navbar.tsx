@@ -55,7 +55,7 @@ const Navbar = () => {
             <NavbarItem label="Home" />
           </div>
           <div
-            onClick={() => router.push(`/browse/movies`)}
+            onClick={() => router.push(`/browse/trailers`)}
             className="cursor-pointer transition"
           >
             <NavbarItem label="Trailers" />

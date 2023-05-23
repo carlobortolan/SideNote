@@ -1,7 +1,7 @@
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 import Navbar from "@/components/Navbar";
-import MovieList from "@/components/MovieList";
+import TrailerList from "@/components/TrailerList";
 import useLatest from "@/hooks/useLatest";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
@@ -19,7 +19,7 @@ export async function getServerSideProps(context: NextPageContext) {
 }
 
 export default function Home() {
-  const { data: movies = [] } = useLatest();
+  const { data: trailers = [] } = useLatest();
   const { isOpen, closeModal } = useInfoModal();
 
   return (
@@ -30,7 +30,7 @@ export default function Home() {
         <br></br>
         <br></br>
         <br></br>
-        <MovieList title="Latest trailers" data={movies} />
+        <TrailerList title="Latest trailers" data={trailers} />
       </div>
     </>
   );

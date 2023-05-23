@@ -2,7 +2,7 @@ import useSWR from "swr";
 import fetcher from "@/lib/fetcher";
 
 const useLatest = () => {
-  const { data, error, isLoading } = useSWR("/api/movies/latest", fetcher, {
+  const { data, error, isLoading } = useSWR("/api/trailers/latest", fetcher, {
     revalidateIfStale: false,
     revalidateOnFocus: false,
     revalidateOnReconnect: false,

@@ -10,11 +10,11 @@ export default async function handler(
   try {
     if (req.method === "POST") {
       const { currentUser } = await serverAuth(req);
-      const { movieId } = req.body;
+      const { trailerId } = req.body;
 
-      const movie = await prismadb.movie.findUnique({ where: { id: movieId } });
-      if (!movie) {
-        return res.status(404).json({ error: "Movie not found" });
+      const trailer = await prismadb.trailer.findUnique({ where: { id: trailerId } });
+      if (!trailer) {
+        return res.status(404).json({ error: "Trailer not found" });
       }
 
       const user = await prismadb.user.update({
@@ -23,7 +23,7 @@ export default async function handler(
         },
         data: {
           favoriteIds: {
-            push: movieId,
+            push: trailerId,
           },
         },
       });
@@ -31,14 +31,14 @@ export default async function handler(
     }
     if (req.method === "DELETE") {
       const { currentUser } = await serverAuth(req);
-      const { movieId } = req.body;
+      const { trailerId } = req.body;
 
-      const movie = await prismadb.movie.findUnique({ where: { id: movieId } });
-      if (!movie) {
-        return res.status(404).json({ error: "Movie not found" });
+      const trailer = await prismadb.trailer.findUnique({ where: { id: trailerId } });
+      if (!trailer) {
+        return res.status(404).json({ error: "Trailer not found" });
       }
 
-      const updatedFavoriteIds = without(currentUser.favoriteIds, movieId);
+      const updatedFavoriteIds = without(currentUser.favoriteIds, trailerId);
       const user = await prismadb.user.update({
         where: {
           email: currentUser.email || "",

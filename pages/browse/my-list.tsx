@@ -1,7 +1,7 @@
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 import Navbar from "@/components/Navbar";
-import MovieList from "@/components/MovieList";
+import TrailerList from "@/components/TrailerList";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
 import useFavorites from "@/hooks/useFavorites";
@@ -31,7 +31,7 @@ export default function Home() {
         <br></br>
         <br></br>
         <br></br>
-        <MovieList title="My List" data={favorites} /> <br />
+        <TrailerList title="My List" data={favorites} /> <br />
       </div>
     </>
   );

@@ -1,13 +1,13 @@
 import React from "react";
 import { isEmpty } from "lodash";
-import MovieCard from "./MovieCard";
+import TrailerCard from "./TrailerCard";
 
-interface MovieListProps {
+interface TrailerListProps {
   data: Record<string, any>[];
   title: string;
 }
 
-const MovieList: React.FC<MovieListProps> = ({ data, title }) => {
+const TrailerList: React.FC<TrailerListProps> = ({ data, title }) => {
   if (isEmpty(data)) {
     return null;
   }
@@ -19,8 +19,8 @@ const MovieList: React.FC<MovieListProps> = ({ data, title }) => {
           {title}
         </p>
         <div className="grid grid-cols-4 gap-2">
-          {data.map((movie) => (
-            <MovieCard key={movie.id} data={movie} />
+          {data.map((trailer) => (
+            <TrailerCard key={trailer.id} data={trailer} />
           ))}
         </div>
       </div>
@@ -28,4 +28,4 @@ const MovieList: React.FC<MovieListProps> = ({ data, title }) => {
   );
 };
 
-export default MovieList;
+export default TrailerList;

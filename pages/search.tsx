@@ -1,7 +1,7 @@
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 import Navbar from "@/components/Navbar";
-import MovieList from "@/components/MovieList";
+import TrailerList from "@/components/TrailerList";
 import useCategory from "@/hooks/useCategory";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
@@ -38,19 +38,19 @@ export default function Home() {
         <br></br>
         <br></br>
         <br></br>
-        <MovieList title="Japanese" data={japanese} /> <br />
-        <MovieList title="Hollywood" data={hollywood} /> <br />
-        <MovieList title="Classics" data={classics} />
+        <TrailerList title="Japanese" data={japanese} /> <br />
+        <TrailerList title="Hollywood" data={hollywood} /> <br />
+        <TrailerList title="Classics" data={classics} />
         <br />
-        <MovieList title="Action" data={action} />
+        <TrailerList title="Action" data={action} />
         <br />
-        <MovieList title="Romance" data={romance} />
+        <TrailerList title="Romance" data={romance} />
         <br />
-        <MovieList title="Drama" data={drama} />
+        <TrailerList title="Drama" data={drama} />
         <br />
-        <MovieList title="Comedy" data={comedy} />
+        <TrailerList title="Comedy" data={comedy} />
         <br />
-        <MovieList title="Science-Fiction" data={sciencefiction} />
+        <TrailerList title="Science-Fiction" data={sciencefiction} />
       </div>
     </>
   );

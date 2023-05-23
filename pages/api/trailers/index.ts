@@ -14,9 +14,9 @@ export default async function handler(
 
   try {
     await serverAuth(req);
-    const movies = await prismadb.movie.findMany();
+    const trailers = await prismadb.trailer.findMany();
 
-    return res.status(200).json(movies);
+    return res.status(200).json(trailers);
   } catch (error) {
     console.log(error);
     return res.status(500).json({ error: "Internal server error" });

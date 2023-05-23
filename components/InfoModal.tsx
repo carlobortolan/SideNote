@@ -3,7 +3,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import PlayButton from "./PlayButton";
 import FavoriteButton from "./FavoriteButton";
 import useInfoModal from "@/hooks/useInfoModal";
-import useMovie from "@/hooks/useMovie";
+import useTrailer from "@/hooks/useTrailer";
 import router from "next/router";
 
 interface InfoModalProps {
@@ -13,8 +13,8 @@ interface InfoModalProps {
 
 const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
   const [isVisible, setIsVisible] = useState(!!visible);
-  const { movieId } = useInfoModal();
-  const { data } = useMovie(movieId);
+  const { trailerId } = useInfoModal();
+  const { data } = useTrailer(trailerId);
   const divRef = useRef<HTMLDivElement>(null);
   const divRef2 = useRef<HTMLDivElement>(null);
 
@@ -86,8 +86,8 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                 {data?.title}
               </p>
               <div className="flex flex-row gap-4 items-center">
-                <PlayButton movieId={data?.id} />
-                <FavoriteButton movieId={data?.id} />
+                <PlayButton trailerId={data?.id} />
+                <FavoriteButton trailerId={data?.id} />
               </div>
             </div>
           </div>

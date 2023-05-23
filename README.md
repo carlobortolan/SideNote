@@ -14,7 +14,7 @@ The application offers OAuth2.0 authentication, allowing users to sign in using 
 
 ## INTRODUCTION
 
-In this fast-paced, attention-starved world, SideNote emerges as the true master of capturing and capitalizing on the elusive human attention span. Forget about wasting time on full-length movies; SideNote is here to serve you the finest, most exhilarating trailers ever conceived.
+In this fast-paced, attention-starved world, SideNote emerges as the true master of capturing and capitalizing on the elusive human attention span. Forget about wasting time on full-length trailers; SideNote is here to serve you the finest, most exhilarating trailers ever conceived.
 
 SideNote delivers an extensive catalog of handpicked trailers, carefully curated to maximize your adrenaline rush. From high-octane action flicks to sultry romances, mind-bending sci-fi adventures to side-splitting comedies, SideNote guarantees a high-energy experience like no other. We bring you the essence of cinema distilled into bite-sized, heart-pounding moments.
 
@@ -32,11 +32,11 @@ SideNote has the following features:
 
 - [x] User authentication with OAuth: Users can sign in using their Google, or GitHub accounts.
 
-- [x] Browse movies: Users can browse a catalog of movies and view detailed information about each title, including a synopsis, the cast and duration.
+- [x] Browse trailers: Users can browse a catalog of trailers and view detailed information about each title, including a synopsis, the cast and duration.
 
-- [x] Browse by category: Users can see all available categories with the respective movies.
+- [x] Browse by category: Users can see all available categories with the respective trailers.
 
-- [ ] Search for titles: Users can search for movies and TV shows by title or genre.
+- [ ] Search for titles: Users can search for trailers and TV shows by title or genre.
 
 - [x] Add titles to their watchlist: Users can add titles to their watchlist to keep track of titles they want to watch later.
     

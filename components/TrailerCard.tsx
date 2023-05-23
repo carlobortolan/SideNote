@@ -5,11 +5,11 @@ import FavoriteButton from "./FavoriteButton";
 import { useRouter } from "next/router";
 import useInfoModal from "@/hooks/useInfoModal";
 
-interface MovieCardProps {
+interface TrailerCardProps {
   data: Record<string, any>;
 }
 
-const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
+const TrailerCard: React.FC<TrailerCardProps> = ({ data }) => {
   const router = useRouter();
   const { openModal } = useInfoModal();
 
@@ -39,7 +39,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
             >
               <BsFillPlayFill size={30} />
             </div>
-            <FavoriteButton movieId={data?.id} />
+            <FavoriteButton trailerId={data?.id} />
             <div
               onClick={() => {
                 openModal(data?.id);
@@ -79,4 +79,4 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   );
 };
 
-export default MovieCard;
+export default TrailerCard;

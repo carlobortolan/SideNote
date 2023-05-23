@@ -7,8 +7,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    console.log("LOG=" + req.method, req.url);
-
     if (req.method !== "GET") {
       return res.status(405).json({
         error: "Method not allowed",
@@ -17,27 +15,27 @@ export default async function handler(
 
     await serverAuth(req);
 
-    const { category } = req.query;
+    const { trailerId } = req.query;
 
-    if (typeof category !== "string" || !category) {
+    if (typeof trailerId !== "string" || !trailerId) {
       return res.status(400).json({
-        error: "Invalid category",
+        error: "Invalid trailerId",
       });
     }
 
-    const movies = await prismadb.movie.findMany({
+    const trailer = await prismadb.trailer.findUnique({
       where: {
-        genre: category,
+        id: trailerId,
       },
     });
 
-    if (!movies) {
+    if (!trailer) {
       return res.status(404).json({
-        error: "Movies not found",
+        error: "Trailer not found",
       });
     }
 
-    return res.status(200).json(movies);
+    return res.status(200).json(trailer);
   } catch (error) {
     console.log(error);
     return res.status(500).json({

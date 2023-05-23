@@ -3,7 +3,7 @@ import fetcher from "@/lib/fetcher";
 
 const useCategory = (category?: string) => {
   const { data, error, isLoading } = useSwr(
-    category ? `/api/movies/category/${category}` : null,
+    category ? `/api/trailers/category/${category}` : null,
     fetcher,
     {
       revalidateIfStale: false,

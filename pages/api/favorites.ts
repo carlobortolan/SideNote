@@ -11,14 +11,14 @@ export default async function handler(
   }
   try {
     const { currentUser } = await serverAuth(req);
-    const favoriteMovies = await prismadb.movie.findMany({
+    const favoriteTrailers = await prismadb.trailer.findMany({
       where: {
         id: {
           in: currentUser?.favoriteIds,
         },
       },
     });
-    return res.status(200).json(favoriteMovies);
+    return res.status(200).json(favoriteTrailers);
   } catch (error) {
     console.log(error);
     return res.status(500).json({ error: "Internal server error" });
