@@ -21,9 +21,16 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
     setIsVisible(!!visible);
   }, [visible]);
 
+  const handleClose = useCallback(() => {
+    setIsVisible(false);
+    setTimeout(() => {
+      onClose();
+    }, 300);
+  }, [onClose]);
+
   useEffect(() => {
     function handleClickOutside(event: { target: any }) {
-      if (divRef.current && divRef.current.contains(event.target) && !divRef2.current.contains(event.target)) {
+      if (divRef.current && divRef.current.contains(event.target) && divRef2.current && !divRef2.current.contains(event.target)) {
         handleClose();
       }
     }
@@ -33,14 +40,8 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, []);
+  }, [handleClose]);
 
-  const handleClose = useCallback(() => {
-    setIsVisible(false);
-    setTimeout(() => {
-      onClose();
-    }, 300);
-  }, [onClose]);
 
   if (!visible) {
     return null;
