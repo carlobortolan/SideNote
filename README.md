@@ -3,7 +3,10 @@
 **A web application to stream trailer for free¹.**
 
 > __NOTE__: __THIS PROJECT IS STILL UNDER DEVELOPMENT.__
-> __NOTE__: _This project is used for learning purposes; do not take is too seriously._
+
+> __NOTE__: _This project is used for learning purposes; do not take it too seriously._
+> 
+> ¹ __DISCLAIMER__: _The trailers shown in the app are for demonstration purposes. I don't own any of the videos provided._
 
 This project is a web application, built using technologies such as the [React](https://react.dev/) library, [Tailwind CSS](https://tailwindcss.com/), [Next.js](https://nextjs.org/), [NextAuth](https://next-auth.js.org/), [Prisma](https://www.prisma.io/), and [MongoDB](https://www.mongodb.com/).
 
@@ -27,17 +30,19 @@ SideNote is your gateway to the ultimate power play in the attention economy. St
 
 SideNote has the following features:
 
-- User authentication with OAuth: Users can sign in using their Google, or GitHub accounts.
+- [x] User authentication with OAuth: Users can sign in using their Google, or GitHub accounts.
 
-- Browse movies: Users can browse a catalog of movies and view detailed information about each title, including a synopsis and duration.
-  
-- Search for titles: Users can search for movies and TV shows by title or genre.
+- [x] Browse movies: Users can browse a catalog of movies and view detailed information about each title, including a synopsis, the cast and duration.
 
-- Add titles to their watchlist: Users can add titles to their watchlist to keep track of titles they want to watch later.
+- [x] Browse by category: Users can see all available categories with the respective movies.
+
+- [ ] Search for titles: Users can search for movies and TV shows by title or genre.
+
+- [x] Add titles to their watchlist: Users can add titles to their watchlist to keep track of titles they want to watch later.
     
-- View recommended titles: Users can view a list of recommended titles based on their watch history and ratings.
+- [x] View recommended titles: Users can view a list of recommended titles based on their watch history and ratings.
 
-- Manage profile: Users can update their profile information, including their name and profile picture.
+- [ ] Manage profile: Users can update their profile information, including their name and profile picture.
 
 
 
