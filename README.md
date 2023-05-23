@@ -1,13 +1,25 @@
 # [SideNote](https://sidenote.vercel.app/)
 
-**A Netflix-like web application to stream videos and concerts for free.**
+**A web application to stream trailer for free¹.**
 
 > __NOTE__: __THIS PROJECT IS STILL UNDER DEVELOPMENT.__
+> __NOTE__: _This project is used for learning purposes; do not take is too seriously._
 
-This project is a web application similar to Netflix, built using modern technologies such as the [React](https://react.dev/) library, [Tailwind CSS](https://tailwindcss.com/), [Next.js](https://nextjs.org/), [NextAuth](https://next-auth.js.org/), [Prisma](https://www.prisma.io/), and [MongoDB](https://www.mongodb.com/).
+This project is a web application, built using technologies such as the [React](https://react.dev/) library, [Tailwind CSS](https://tailwindcss.com/), [Next.js](https://nextjs.org/), [NextAuth](https://next-auth.js.org/), [Prisma](https://www.prisma.io/), and [MongoDB](https://www.mongodb.com/).
 
 The application offers OAuth2.0 authentication, allowing users to sign in using their Google or GitHub accounts.
 
+## INTRODUCTION
+
+In this fast-paced, attention-starved world, SideNote emerges as the true master of capturing and capitalizing on the elusive human attention span. Forget about wasting time on full-length movies; SideNote is here to serve you the finest, most exhilarating trailers ever conceived.
+
+SideNote delivers an extensive catalog of handpicked trailers, carefully curated to maximize your adrenaline rush. From high-octane action flicks to sultry romances, mind-bending sci-fi adventures to side-splitting comedies, SideNote guarantees a high-energy experience like no other. We bring you the essence of cinema distilled into bite-sized, heart-pounding moments.
+
+Our interface is a work of art - a visual feast designed to lure you into the never-ending world of trailer addiction. Prepare to be dazzled by a stunning platform that keeps your attention locked onto the screen. Discover the latest releases, explore trending trailers, and unlock exclusive glimpses behind the scenes. SideNote is the ultimate seducer, keeping you craving for more.
+
+Whether you're at home, in transit, or on a corporate jet, SideNote is always within reach. With support for smartphones, tablets, web-browsers, you can let the world of cinema unfold in the palm of your hand.
+
+SideNote is your gateway to the ultimate power play in the attention economy. Step into the realm where trailers reign supreme, and anticipation becomes the currency of success. Prepare for a future where SideNote dominates the attention market, fueling your addiction and leaving you hungry for the next adrenaline rush. Welcome to SideNote, where we take control of your attention, and the world is at our fingertips. Greed is good, my friend, and SideNote is here to prove it.
 
 ## FEATURES
 
