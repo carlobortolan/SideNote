@@ -18,6 +18,10 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
       <img
         className="cursor-pointer object-cover transition duration shadow-xl rounded-md group-hover:opacity:90 sm:group-hover:opacity-0 delay-300 w-full h-[12vw]"
         src={data.thumbnailUrl}
+        onClick={() => {
+          openModal(data?.id);
+        }}
+        // onClick={() => router.push(`/watch/${data?.id}`)}
         alt={"Thumbnail"}
       />
       <div className="opacity-0 absolute top-0 transition duration-200 z-10 invisible sm:visible delay-300 w-full scale-0 group-hover:scale-110 group-hover:-translate-y-[6vw] group-hover:translate-x-[2vw] group-hover:opacity-100">
@@ -54,8 +58,16 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
             </p>
           </div>
           <div className="flex flex-row mt-4 gap-2 items-center">
-            <p className="text-white text-[10px] lg:text-sm">{data.genre}</p>|
-            <p className="text-white text-[10px] lg:text-sm">{data.duration} min</p>
+            <p
+              onClick={() => router.push(`/browse/category#${data?.genre}`)}
+              className="cursor-pointer active:text-gray-400 hover:text-gray-300 transition hover:underline hover:translate-y-[-2px] transition-transform duration-200 text-white text-[10px] lg:text-sm transition"
+            >
+              {data.genre}
+            </p>
+            |
+            <p className="text-white text-[10px] lg:text-sm">
+              {data.duration} min
+            </p>
             |
             <p className="text-green-400 font-semibold">
               New <span className="text-white"> {data.release_year}</span>

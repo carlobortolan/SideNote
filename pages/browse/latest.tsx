@@ -30,7 +30,7 @@ export default function Home() {
         <br></br>
         <br></br>
         <br></br>
-        <MovieList title="Latest movies" data={movies} />
+        <MovieList title="Latest trailers" data={movies} />
       </div>
     </>
   );

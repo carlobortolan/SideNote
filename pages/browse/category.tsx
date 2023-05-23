@@ -35,23 +35,21 @@ export default function Home() {
       <Navbar />
 
       <div className="pb-40 ml-8">
-        <br></br>
-        <br></br>
-        <br></br>
+        <br id = "Anime" className="" />
         <MovieList title="Anime" data={anime} /> <br />
-        <br />
+        <br id = "Adventure" className="" />
         <MovieList title="Adventure" data={adventure} /> <br />
-        <br />
+        <br id = "Action" className="mt-10" />
         <MovieList title="Action" data={action} />
-        <br />
+        <br id = "Crime" className="mt-10" />
         <MovieList title="Crime" data={crime} />
-        <br />
+        <br id = "Drama" className="mt-10" />
         <MovieList title="Drama" data={drama} />
-        <br />
+        <br id = "Romance" className="mt-10" />
         <MovieList title="Romance" data={romance} />
-        <br />
+        <br id = "Science-Fiction" className="mt-10" />
         <MovieList title="Science-Fiction" data={sciencefiction} />
-        <br />
+        <br id = "Thriller" className="mt-10" />
         <MovieList title="Thriller" data={thriller} />
       </div>
     </>

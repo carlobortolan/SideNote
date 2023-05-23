@@ -4,6 +4,7 @@ import PlayButton from "./PlayButton";
 import FavoriteButton from "./FavoriteButton";
 import useInfoModal from "@/hooks/useInfoModal";
 import useMovie from "@/hooks/useMovie";
+import router from "next/router";
 
 interface InfoModalProps {
   visible?: boolean;
@@ -30,7 +31,12 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
 
   useEffect(() => {
     function handleClickOutside(event: { target: any }) {
-      if (divRef.current && divRef.current.contains(event.target) && divRef2.current && !divRef2.current.contains(event.target)) {
+      if (
+        divRef.current &&
+        divRef.current.contains(event.target) &&
+        divRef2.current &&
+        !divRef2.current.contains(event.target)
+      ) {
         handleClose();
       }
     }
@@ -42,13 +48,15 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
     };
   }, [handleClose]);
 
-
   if (!visible) {
     return null;
   }
 
   return (
-    <div ref={divRef} className="z-50 transition duration-300 bg-black bg-opacity-80 flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0">
+    <div
+      ref={divRef}
+      className="z-50 transition duration-300 bg-black bg-opacity-80 flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0"
+    >
       <div
         ref={divRef2}
         className="relative w-auto mx-auto max-w-3xl rounded-md overflow-hidden"
@@ -91,7 +99,14 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
               <p className="text-white text-lg">
                 {data?.duration + " minutes"}
               </p>
-              <p className="text-white text-lg font-semibold italic">
+              <p
+                onClick={() => {
+                  handleClose();
+                  router.push(`/browse/category#${data?.genre}`);
+                }}
+                className="text-white text-lg font-semibold italic cursor-pointer active:text-gray-400 hover:text-gray-300 transition hover:underline hover:translate-y-[-2px] transition-transform duration-200"
+              >
+                {" "}
                 {data?.genre}
               </p>
             </div>

@@ -58,7 +58,7 @@ const Navbar = () => {
             onClick={() => router.push(`/browse/movies`)}
             className="cursor-pointer transition"
           >
-            <NavbarItem label="Films" />
+            <NavbarItem label="Trailers" />
           </div>
           <div
             onClick={() => router.push(`/browse/latest`)}
