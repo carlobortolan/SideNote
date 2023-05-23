@@ -92,7 +92,7 @@ const Navbar = () => {
           <MobileMenu visible={showMobileMenu} />
         </div>
         <div className="flex flex-row ml-auto gap-7 items-center">
-          <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
+          <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition hover:underline hover:translate-y-[-2px] transition-transform duration-200">
             <BsSearch onClick={() => router.push(`/search`)} />
           </div>
           <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">

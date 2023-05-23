@@ -1,4 +1,5 @@
 import { signOut } from "next-auth/react";
+
 import React from "react";
 
 import useCurrentUser from "@/hooks/useCurrentUser";
@@ -30,8 +31,15 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
       </div>
       <hr className="bg-gray-600 border-0 h-px my-4" />
       <div
+        onClick={() => router.push(`/profile/settings`)}
+        className="px-3 text-center text-white text-sm hover:underline transition hover:underline hover:translate-y-[-2px] transition-transform duration-200"
+      >
+        Account Settings
+      </div>
+      <hr className="bg-gray-600 border-0 h-px my-4" />
+      <div
         onClick={() => signOut()}
-        className="px-3 text-center text-white text-sm hover:underline"
+        className="px-3 text-center text-white text-sm hover:underline transition hover:underline hover:translate-y-[-2px] transition-transform duration-200"
       >
         Sign out of SideNote
       </div>
