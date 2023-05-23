@@ -19,15 +19,14 @@ export async function getServerSideProps(context: NextPageContext) {
 }
 
 export default function Home() {
-  const { data: japanese = [] } = useCategory("Japanese");
   const { data: adventure = [] } = useCategory("Adventure");
-  const { data: classics = [] } = useCategory("Classics");
   const { data: action = [] } = useCategory("Action");
-  const { data: romance = [] } = useCategory("Romance");
-  const { data: drama = [] } = useCategory("Drama");
+  const { data: anime = [] } = useCategory("Anime");
   const { data: crime = [] } = useCategory("Crime");
-  const { data: thriller = [] } = useCategory("Thriller");
+  const { data: drama = [] } = useCategory("Drama");
+  const { data: romance = [] } = useCategory("Romance");
   const { data: sciencefiction = [] } = useCategory("ScienceFiction");
+  const { data: thriller = [] } = useCategory("Thriller");
   const { isOpen, closeModal } = useInfoModal();
 
   return (
@@ -39,21 +38,21 @@ export default function Home() {
         <br></br>
         <br></br>
         <br></br>
-        <MovieList title="Japanese" data={japanese} /> <br />
+        <MovieList title="Anime" data={anime} /> <br />
+        <br />
         <MovieList title="Adventure" data={adventure} /> <br />
-        <MovieList title="Classics" data={classics} />
         <br />
         <MovieList title="Action" data={action} />
         <br />
-        <MovieList title="Romance" data={romance} />
+        <MovieList title="Crime" data={crime} />
         <br />
         <MovieList title="Drama" data={drama} />
         <br />
-        <MovieList title="Thriller" data={thriller} />
-        <br />
-        <MovieList title="Crime" data={crime} />
+        <MovieList title="Romance" data={romance} />
         <br />
         <MovieList title="Science-Fiction" data={sciencefiction} />
+        <br />
+        <MovieList title="Thriller" data={thriller} />
       </div>
     </>
   );
