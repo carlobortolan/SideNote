@@ -5,6 +5,7 @@ import TrailerList from "@/components/TrailerList";
 import useLatest from "@/hooks/useLatest";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
+import { useEffect } from "react";
 
 export async function getServerSideProps(context: NextPageContext) {
   if (!(await getSession(context))) {
@@ -18,10 +19,12 @@ export async function getServerSideProps(context: NextPageContext) {
   return { props: {} };
 }
 
-export default function Home() {
+export default function Latest() {
   const { data: trailers = [] } = useLatest();
   const { isOpen, closeModal } = useInfoModal();
-
+  useEffect(() => {
+    document.title = "SideNote | Latest";
+  }, []);
   return (
     <>
       <InfoModal visible={isOpen} onClose={closeModal} />

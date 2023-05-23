@@ -1,12 +1,12 @@
-# [SideNote](https://sidenote.vercel.app/)
+# [SideNote](https://sidenote.vercel.app)
 
 **A web application to stream trailer for free¹.**
 
-> __NOTE__: __THIS PROJECT IS STILL UNDER DEVELOPMENT.__
+> **NOTE**: **THIS PROJECT IS STILL UNDER DEVELOPMENT.**
 
-> __NOTE__: _This project is used for learning purposes; do not take it too seriously._
-> 
-> ¹ __DISCLAIMER__: _The trailers shown in the app are for demonstration purposes. I don't own any of the videos provided._
+> **NOTE**: _This project is used for learning purposes; do not take it too seriously._
+>
+> ¹ **DISCLAIMER**: _The trailers shown in the app are for demonstration purposes. I don't own any of the videos provided._
 
 This project is a web application, built using technologies such as the [React](https://react.dev/) library, [Tailwind CSS](https://tailwindcss.com/), [Next.js](https://nextjs.org/), [NextAuth](https://next-auth.js.org/), [Prisma](https://www.prisma.io/), and [MongoDB](https://www.mongodb.com/).
 
@@ -14,7 +14,7 @@ The application offers OAuth2.0 authentication, allowing users to sign in using 
 
 ## INTRODUCTION
 
-In this fast-paced, attention-starved world, SideNote emerges as the true master of capturing and capitalizing on the elusive human attention span. Forget about wasting time on full-length trailers; SideNote is here to serve you the finest, most exhilarating trailers ever conceived.
+In this fast-paced, attention-starved world, SideNote emerges as the true master of capturing and capitalizing on the elusive human attention span. Forget about wasting time on full-length movies; SideNote is here to serve you the finest, most exhilarating trailers ever conceived.
 
 SideNote delivers an extensive catalog of handpicked trailers, carefully curated to maximize your adrenaline rush. From high-octane action flicks to sultry romances, mind-bending sci-fi adventures to side-splitting comedies, SideNote guarantees a high-energy experience like no other. We bring you the essence of cinema distilled into bite-sized, heart-pounding moments.
 
@@ -26,7 +26,7 @@ SideNote is your gateway to the ultimate power play in the attention economy. St
 
 ## FEATURES
 
-> __NOTE__: _Some of these features have not been implemented yet._
+> **NOTE**: _Some of these features have not been implemented yet._
 
 SideNote has the following features:
 
@@ -39,59 +39,51 @@ SideNote has the following features:
 - [ ] Search for titles: Users can search for trailers and TV shows by title or genre.
 
 - [x] Add titles to their watchlist: Users can add titles to their watchlist to keep track of titles they want to watch later.
-    
 - [x] View recommended titles: Users can view a list of recommended titles based on their watch history and ratings.
 
 - [ ] Manage profile: Users can update their profile information, including their name and profile picture.
-
-
 
 ## INSTALLATION
 
 To get started with the project, you can follow these steps:
 
 1. Clone the repository:
-    ```
-    git clone https://github.com/carlobortolan/SideNote.git
-    ```
+   ```
+   git clone https://github.com/carlobortolan/SideNote.git
+   ```
 2. Navigate to the project directory:
-    ```
-    cd sidenote
-    ```
+   ```
+   cd sidenote
+   ```
 3. Install the dependencies:
-    ```
-    npm install
-    ```
+   ```
+   npm install
+   ```
 4. Create a .env file in the root directory with the following environment variables:
-    ```
-    DATABASE_URL=<secret>
-    GITHUB_CLIENT_SECRET=<secret>
-    GITHUB_CLIENT_ID=<secret>
-    GOOGLE_CLIENT_ID=<secret>
-    GOOGLE_CLIENT_SECRET=<secret>
-    NEXTAUTH_SECRET=<secret>
-    NEXTAUTH_JWT_SECRET=<secret>
-    ```
+   ```
+   DATABASE_URL=<secret>
+   GITHUB_CLIENT_SECRET=<secret>
+   GITHUB_CLIENT_ID=<secret>
+   GOOGLE_CLIENT_ID=<secret>
+   GOOGLE_CLIENT_SECRET=<secret>
+   NEXTAUTH_SECRET=<secret>
+   NEXTAUTH_JWT_SECRET=<secret>
+   ```
 5. Start the application:
-    ```
-    npm run dev
-    ```
+
+   ```
+   npm run dev
+   ```
 
 6. Open the application in your browser at http://localhost:3000.
-
 
 ## TECHNOLOGIES USED
 
 - [React](https://react.dev/): A JavaScript library for building user interfaces.
-    
 - [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework for building responsive designs.
-    
 - [Next.js](https://nextjs.org/): A framework for building server-side rendered React applications.
-    
 - [Prisma](https://www.prisma.io/): A database toolkit for building scalable and type-safe databases.
-    
 - [MongoDB](https://www.mongodb.com/): A document-oriented NoSQL database.
-    
 - [NextAuth](https://next-auth.js.org/): An authentication library for Next.js applications that supports OAuth.
 
 ## CONTRIBUTING

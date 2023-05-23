@@ -5,6 +5,7 @@ import TrailerList from "@/components/TrailerList";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
 import useCategory from "@/hooks/useCategory";
+import { useEffect } from "react";
 
 export async function getServerSideProps(context: NextPageContext) {
   if (!(await getSession(context))) {
@@ -18,7 +19,11 @@ export async function getServerSideProps(context: NextPageContext) {
   return { props: {} };
 }
 
-export default function Home() {
+export default function Category() {
+  useEffect(() => {
+    document.title = "SideNote | Browse";
+  }, []);
+
   const { data: adventure = [] } = useCategory("Adventure");
   const { data: action = [] } = useCategory("Action");
   const { data: anime = [] } = useCategory("Anime");
@@ -35,21 +40,21 @@ export default function Home() {
       <Navbar />
 
       <div className="pb-40 ml-8">
-        <br id = "Anime" className="" />
+        <br id="Anime" className="" />
         <TrailerList title="Anime" data={anime} /> <br />
-        <br id = "Adventure" className="" />
+        <br id="Adventure" className="" />
         <TrailerList title="Adventure" data={adventure} /> <br />
-        <br id = "Action" className="mt-10" />
+        <br id="Action" className="mt-10" />
         <TrailerList title="Action" data={action} />
-        <br id = "Crime" className="mt-10" />
+        <br id="Crime" className="mt-10" />
         <TrailerList title="Crime" data={crime} />
-        <br id = "Drama" className="mt-10" />
+        <br id="Drama" className="mt-10" />
         <TrailerList title="Drama" data={drama} />
-        <br id = "Romance" className="mt-10" />
+        <br id="Romance" className="mt-10" />
         <TrailerList title="Romance" data={romance} />
-        <br id = "Science-Fiction" className="mt-10" />
+        <br id="Science-Fiction" className="mt-10" />
         <TrailerList title="Science-Fiction" data={sciencefiction} />
-        <br id = "Thriller" className="mt-10" />
+        <br id="Thriller" className="mt-10" />
         <TrailerList title="Thriller" data={thriller} />
       </div>
     </>

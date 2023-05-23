@@ -7,6 +7,7 @@ import useTrailerList from "@/hooks/useTrailerList";
 import useFavorites from "@/hooks/useFavorites";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
+import { useEffect } from "react";
 
 export async function getServerSideProps(context: NextPageContext) {
   if (!(await getSession(context))) {
@@ -21,6 +22,10 @@ export async function getServerSideProps(context: NextPageContext) {
 }
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "SideNote";
+  }, []);
+
   const { data: trailers = [] } = useTrailerList();
   const { data: favorites = [] } = useFavorites();
   const { isOpen, closeModal } = useInfoModal();

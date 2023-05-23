@@ -2,6 +2,7 @@ import useCurrentUser from "@/hooks/useCurrentUser";
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -17,7 +18,12 @@ export async function getServerSideProps(context: NextPageContext) {
   return { props: {} };
 }
 
-const Profiles = () => {
+export default function Profiles() {
+  useEffect(() => {
+    document.title = "SideNote | Profiles";
+  }, []);
+
+  // const Profiles = () => {
   const { data: user } = useCurrentUser();
   const router = useRouter();
 
@@ -41,6 +47,6 @@ const Profiles = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Profiles;
+// export default Profiles;

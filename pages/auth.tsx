@@ -1,12 +1,15 @@
 import Input from "@/components/Input";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 import { signIn } from "next-auth/react";
-
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 
 const Auth = () => {
+  useEffect(() => {
+    document.title = "SideNote";
+  }, []);
+
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");

@@ -2,12 +2,11 @@ import useCurrentUser from "@/hooks/useCurrentUser";
 import { NextPageContext } from "next";
 import { getSession, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
-
   if (!session) {
     return {
       redirect: {
@@ -19,8 +18,11 @@ export async function getServerSideProps(context: NextPageContext) {
   return { props: {} };
 }
 
+export default function Settings() {
+  useEffect(() => {
+    document.title = "SideNote | Settings";
+  }, []);
 
-const Settings = () => {
   const { data: user } = useCurrentUser();
   const router = useRouter();
 
@@ -37,21 +39,19 @@ const Settings = () => {
               <div
                 onClick={() => signOut()}
                 className="cursor-pointer transition text-center text-white active:text-gray-400 hover:text-gray-300 hover:underline hover:translate-y-[-2px] transition-transform duration-200"
-              >Delete Account</div>
+              >
+                Delete Account
+              </div>
               <div
                 onClick={() => signOut()}
                 className="cursor-pointer transition py-5 text-center text-white active:text-gray-400 hover:text-gray-300 hover:underline hover:translate-y-[-2px] transition-transform duration-200"
-              >Change Name</div>
+              >
+                Change Name
+              </div>
             </div>
-            
           </div>
         </div>
       </div>
     </div>
-
-
-
   );
-};
-
-export default Settings;
+}

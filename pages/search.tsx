@@ -5,6 +5,7 @@ import TrailerList from "@/components/TrailerList";
 import useCategory from "@/hooks/useCategory";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
+import { useEffect } from "react";
 
 export async function getServerSideProps(context: NextPageContext) {
   if (!(await getSession(context))) {
@@ -19,6 +20,10 @@ export async function getServerSideProps(context: NextPageContext) {
 }
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "SideNote | Search";
+  }, []);
+
   const { data: japanese = [] } = useCategory("japanese");
   const { data: hollywood = [] } = useCategory("hollywood");
   const { data: classics = [] } = useCategory("classics");
