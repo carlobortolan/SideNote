@@ -1,7 +1,7 @@
 import NavbarItem from "./NavbarItem";
 import MobileMenu from "./MobileMenu";
 import AccountMenu from "./AccountMenu";
-import { BsChevronDown, BsSearch, BsBell } from "react-icons/bs";
+import { BsChevronDown, BsSearch } from "react-icons/bs";
 import { useCallback, useEffect, useState } from "react";
 import useCurrentUser from "@/hooks/useCurrentUser";
 import router from "next/router";
@@ -94,9 +94,6 @@ const Navbar = () => {
         <div className="flex flex-row ml-auto gap-7 items-center">
           <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition hover:underline hover:translate-y-[-2px] transition-transform duration-200">
             <BsSearch onClick={() => router.push(`/search`)} />
-          </div>
-          <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
-            <BsBell />
           </div>
           <div
             onClick={toggleAccountMenu}

@@ -30,7 +30,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         <div className="z-10 bg-zinc-800 p-2 lg:p-4 absolute w-full transition shadow-md rounded-b-md">
           <div className="flex flex-row items-center gap-3">
             <div
-              className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-white rounded-full flex justify-center items-center transition hover:bg-neutral-300"
+              className="cursor-pointer w-6 h-6 lg:w-10 lg:h-10 bg-white rounded-full flex justify-center items-center transition hover:bg-neutral-400"
               onClick={() => router.push(`/watch/${data?.id}`)}
             >
               <BsFillPlayFill size={30} />
@@ -40,10 +40,10 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
               onClick={() => {
                 openModal(data?.id);
               }}
-              className="cursor-pointer ml-auto group/item w-6 h-6 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-neutral-300"
+              className="cursor-pointer ml-auto group/item w-6 h-6 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-neutral-400"
             >
               <BiChevronDown
-                className="text-white group-hover/item:text-neutral-300"
+                className="text-white group-hover/item:text-neutral-400"
                 size={30}
               />
             </div>
@@ -55,7 +55,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           </div>
           <div className="flex flex-row mt-4 gap-2 items-center">
             <p className="text-white text-[10px] lg:text-sm">{data.genre}</p>|
-            <p className="text-white text-[10px] lg:text-sm">{data.duration}</p>
+            <p className="text-white text-[10px] lg:text-sm">{data.duration} min</p>
             |
             <p className="text-green-400 font-semibold">
               New <span className="text-white"> {data.release_year}</span>
