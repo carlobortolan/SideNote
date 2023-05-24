@@ -40,7 +40,7 @@ export default function Category() {
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
 
-      <div className="pb-40 ml-8 mr-8">
+      <div className="pb-40 lg:ml-8 lg:mr-8">
         <br></br>
         {/* <br id="Anime" className="" /> */}
         {/* <TrailerList title="Anime" data={anime} /> <br /> */}
@@ -52,8 +52,8 @@ export default function Category() {
         <TrailerList title="Crime" data={crime} />
         <br id="Drama" className="mt-10" />
         <TrailerList title="Drama" data={drama} />
-        <br id="Romance" className="mt-10" />
-        <TrailerList title="Romance" data={romance} />
+        {/* <br id="Romance" className="mt-10" />
+        <TrailerList title="Romance" data={romance} /> */}
         <br id="Science-Fiction" className="mt-10" />
         <TrailerList title="Science-Fiction" data={sciencefiction} />
         <br id="Thriller" className="mt-10" />

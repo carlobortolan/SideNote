@@ -30,7 +30,7 @@ export default function Trailers() {
     <>
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
-      <div className="pb-40 ml-8 mr-8 ">
+      <div className="pb-40 lg:ml-8 lg:mr-8">
         <br id="Trailers" className="mt-10" />
         <br></br>
         <TrailerList title="All trailers" data={trailers} />

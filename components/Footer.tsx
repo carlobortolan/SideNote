@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -20,16 +21,16 @@ const Footer = () => {
         <div className="flex justify-center mt-6">
           <ul className="flex text-gray-300 text-center space-x-4">
             <li>
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>{" "}
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link href="/about">About</Link>{" "}
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <Link href="/contact">Contact</Link>{" "}
             </li>
             <li>
-              <a href="/privacy">Privacy Policy</a>
+              <Link href="/privacy">Privacy Policy</Link>{" "}
             </li>
           </ul>
         </div>
