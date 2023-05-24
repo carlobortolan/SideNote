@@ -3,7 +3,7 @@ import MobileMenu from "./MobileMenu";
 import SearchMenu from "./SearchMenu";
 import AccountMenu from "./AccountMenu";
 import { BsChevronDown, BsSearch } from "react-icons/bs";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import useCurrentUser from "@/hooks/useCurrentUser";
 import router from "next/router";
 
@@ -14,6 +14,7 @@ const Navbar = () => {
   const [showAccountMenu, setShowAccountMenu] = useState(false);
   const [showSearchMenu, setShowSearchMenu] = useState(false);
   const [showBackground, setShowBackground] = useState(false);
+  const divRef = useRef<HTMLDivElement>(null);
 
   const { data: currentUser } = useCurrentUser();
 
@@ -35,9 +36,31 @@ const Navbar = () => {
   const toggleAccountMenu = useCallback(() => {
     setShowAccountMenu((current) => !current);
   }, []);
-  const openSearchMenu = useCallback(() => {
-    setShowSearchMenu((current) => true);
+  const toggleSearchMenu = useCallback(() => {
+    setShowSearchMenu((current) => !current);
   }, []);
+
+  const openSearchMenu = useCallback(() => {
+    setShowSearchMenu(true);
+  }, []);
+
+  useEffect(() => {
+    function handleClickOutside(event: { target: any }) {
+      if (
+        divRef.current &&
+        !divRef.current.contains(event.target) &&
+        showSearchMenu
+      ) {
+        toggleSearchMenu();
+      }
+    }
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [toggleSearchMenu, showSearchMenu]);
 
   return (
     <nav className="w-full fixed z-40">
@@ -96,11 +119,21 @@ const Navbar = () => {
           />
           <MobileMenu visible={showMobileMenu} />
         </div>
-        <div className="flex flex-row ml-auto gap-7 items-center">
+        <div
+          onClick={openSearchMenu}
+          className="flex flex-row ml-auto gap-7 items-center"
+        >
           <div
-            onClick={openSearchMenu}
-            className="flex flex-row items-center gap-2 cursor-pointer relative"
+            ref={divRef}
+            className="flex flex-row items-center gap-2 relative"
           >
+            <BsSearch
+              className={`disabled ${
+                showSearchMenu
+                  ? "disabled text-gray-0"
+                  : "text-gray-200 hover:text-gray-300 cursor-pointer transition hover:underline hover:translate-y-[-2px] transition-transform duration-200"
+              }`}
+            />
             <SearchMenu visible={showSearchMenu} />
           </div>
           <div
@@ -110,7 +143,7 @@ const Navbar = () => {
             <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
               <img src={currentUser?.image} alt="" />
             </div>
-            
+
             <BsChevronDown
               className={`text-white transition ${
                 showAccountMenu ? "rotate-180" : "rotate-0"
