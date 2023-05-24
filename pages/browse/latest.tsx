@@ -6,6 +6,7 @@ import useLatest from "@/hooks/useLatest";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
 import { useEffect } from "react";
+import Footer from "@/components/Footer";
 
 export async function getServerSideProps(context: NextPageContext) {
   if (!(await getSession(context))) {
@@ -34,6 +35,7 @@ export default function Latest() {
         <br></br>
         <TrailerList title="Latest trailers" data={trailers} />
       </div>
+      <Footer />
     </>
   );
 }

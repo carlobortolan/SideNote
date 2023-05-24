@@ -48,5 +48,3 @@ export default function Profiles() {
     </div>
   );
 }
-
-// export default Profiles;

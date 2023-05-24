@@ -6,6 +6,7 @@ import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
 import useFavorites from "@/hooks/useFavorites";
 import { useEffect } from "react";
+import Footer from "@/components/Footer";
 
 export async function getServerSideProps(context: NextPageContext) {
   if (!(await getSession(context))) {
@@ -39,6 +40,7 @@ export default function MyList() {
         />{" "}
         <br />
       </div>
+      <Footer />
     </>
   );
 }

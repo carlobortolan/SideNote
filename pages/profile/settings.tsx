@@ -4,6 +4,7 @@ import { getSession, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useState } from "react";
 import axios from "axios";
+import Footer from "@/components/Footer";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -52,6 +53,7 @@ export default function Settings() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -3,9 +3,10 @@ import { getSession } from "next-auth/react";
 import Navbar from "@/components/Navbar";
 import Billboard from "@/components/Billboard";
 import TrailerList from "@/components/TrailerList";
+import InfoModal from "@/components/InfoModal";
+import Footer from "@/components/Footer";
 import useTrailerList from "@/hooks/useTrailerList";
 import useFavorites from "@/hooks/useFavorites";
-import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
 import { useEffect } from "react";
 
@@ -39,6 +40,7 @@ export default function Home() {
         <TrailerList title="My List" data={favorites} />
         <TrailerList title="Trending Now" data={trailers} />
       </div>
+      <Footer />
     </>
   );
 }

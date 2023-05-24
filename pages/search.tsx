@@ -7,6 +7,7 @@ import useInfoModal from "@/hooks/useInfoModal";
 import { useEffect } from "react";
 import useSearch from "@/hooks/useSearch";
 import { useRouter } from "next/router";
+import Footer from "@/components/Footer";
 
 export async function getServerSideProps(context: NextPageContext) {
   if (!(await getSession(context))) {
@@ -47,6 +48,7 @@ export default function Search() {
           data={results}
         />
       </div>
+      <Footer />
     </>
   );
 }

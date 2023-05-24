@@ -6,6 +6,7 @@ import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
 import useCategory from "@/hooks/useCategory";
 import { useEffect } from "react";
+import Footer from "@/components/Footer";
 
 export async function getServerSideProps(context: NextPageContext) {
   if (!(await getSession(context))) {
@@ -41,7 +42,7 @@ export default function Category() {
 
       <div className="pb-40 ml-8 mr-8">
         <br></br>
-{/* <br id="Anime" className="" /> */}
+        {/* <br id="Anime" className="" /> */}
         {/* <TrailerList title="Anime" data={anime} /> <br /> */}
         <br id="Adventure" className="mt-10" />
         <TrailerList title="Adventure" data={adventure} />
@@ -58,6 +59,7 @@ export default function Category() {
         <br id="Thriller" className="mt-10" />
         <TrailerList title="Thriller" data={thriller} />
       </div>
+      <Footer />
     </>
   );
 }

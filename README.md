@@ -36,7 +36,7 @@ SideNote has the following features:
 
 - [x] Browse by category: Users can see all available categories with the respective trailers.
 
-- [ ] Search for titles: Users can search for trailers and TV shows by title or genre.
+- [x] Search for titles: Users can search for trailers and TV shows by title or genre.
 
 - [x] Add titles to their watchlist: Users can add titles to their watchlist to keep track of titles they want to watch later.
 - [x] View recommended titles: Users can view a list of recommended titles based on their watch history and ratings.

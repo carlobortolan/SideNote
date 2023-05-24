@@ -6,6 +6,7 @@ import useTrailerList from "@/hooks/useTrailerList";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
 import { useEffect } from "react";
+import Footer from "@/components/Footer";
 
 export async function getServerSideProps(context: NextPageContext) {
   if (!(await getSession(context))) {
@@ -30,10 +31,11 @@ export default function Trailers() {
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
       <div className="pb-40 ml-8 mr-8 ">
-      <br id="Trailers" className="mt-10" />
+        <br id="Trailers" className="mt-10" />
         <br></br>
         <TrailerList title="All trailers" data={trailers} />
       </div>
+      <Footer />
     </>
   );
 }
