@@ -1,5 +1,6 @@
 import NavbarItem from "./NavbarItem";
 import MobileMenu from "./MobileMenu";
+import SearchMenu from "./SearchMenu";
 import AccountMenu from "./AccountMenu";
 import { BsChevronDown, BsSearch } from "react-icons/bs";
 import { useCallback, useEffect, useState } from "react";
@@ -11,6 +12,7 @@ const TOP_OFFSET = 66;
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showAccountMenu, setShowAccountMenu] = useState(false);
+  const [showSearchMenu, setShowSearchMenu] = useState(false);
   const [showBackground, setShowBackground] = useState(false);
 
   const { data: currentUser } = useCurrentUser();
@@ -32,6 +34,9 @@ const Navbar = () => {
   }, []);
   const toggleAccountMenu = useCallback(() => {
     setShowAccountMenu((current) => !current);
+  }, []);
+  const openSearchMenu = useCallback(() => {
+    setShowSearchMenu((current) => true);
   }, []);
 
   return (
@@ -92,8 +97,11 @@ const Navbar = () => {
           <MobileMenu visible={showMobileMenu} />
         </div>
         <div className="flex flex-row ml-auto gap-7 items-center">
-          <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition hover:underline hover:translate-y-[-2px] transition-transform duration-200">
-            <BsSearch onClick={() => router.push(`/search`)} />
+          <div
+            onClick={openSearchMenu}
+            className="flex flex-row items-center gap-2 cursor-pointer relative"
+          >
+            <SearchMenu visible={showSearchMenu} />
           </div>
           <div
             onClick={toggleAccountMenu}
@@ -102,6 +110,7 @@ const Navbar = () => {
             <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
               <img src={currentUser?.image} alt="" />
             </div>
+            
             <BsChevronDown
               className={`text-white transition ${
                 showAccountMenu ? "rotate-180" : "rotate-0"

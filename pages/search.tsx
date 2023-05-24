@@ -2,10 +2,11 @@ import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 import Navbar from "@/components/Navbar";
 import TrailerList from "@/components/TrailerList";
-import useCategory from "@/hooks/useCategory";
 import InfoModal from "@/components/InfoModal";
 import useInfoModal from "@/hooks/useInfoModal";
 import { useEffect } from "react";
+import useSearch from "@/hooks/useSearch";
+import { useRouter } from "next/router";
 
 export async function getServerSideProps(context: NextPageContext) {
   if (!(await getSession(context))) {
@@ -19,21 +20,16 @@ export async function getServerSideProps(context: NextPageContext) {
   return { props: {} };
 }
 
-export default function Home() {
+export default function Search() {
   useEffect(() => {
     document.title = "SideNote | Search";
   }, []);
 
-  const { data: japanese = [] } = useCategory("japanese");
-  const { data: hollywood = [] } = useCategory("hollywood");
-  const { data: classics = [] } = useCategory("classics");
-  const { data: action = [] } = useCategory("action");
-  const { data: romance = [] } = useCategory("romance");
-  const { data: drama = [] } = useCategory("drama");
-  const { data: comedy = [] } = useCategory("comedy");
-  const { data: sciencefiction = [] } = useCategory("sciencefiction");
   const { isOpen, closeModal } = useInfoModal();
-
+  const router = useRouter();
+  const { query } = router.query;
+  const { data: results = [] } = useSearch(query as string);
+  
   return (
     <>
       <InfoModal visible={isOpen} onClose={closeModal} />
@@ -43,19 +39,7 @@ export default function Home() {
         <br></br>
         <br></br>
         <br></br>
-        <TrailerList title="Japanese" data={japanese} /> <br />
-        <TrailerList title="Hollywood" data={hollywood} /> <br />
-        <TrailerList title="Classics" data={classics} />
-        <br />
-        <TrailerList title="Action" data={action} />
-        <br />
-        <TrailerList title="Romance" data={romance} />
-        <br />
-        <TrailerList title="Drama" data={drama} />
-        <br />
-        <TrailerList title="Comedy" data={comedy} />
-        <br />
-        <TrailerList title="Science-Fiction" data={sciencefiction} />
+        <TrailerList title="Search results" data={results} />
       </div>
     </>
   );
