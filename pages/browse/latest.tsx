@@ -29,9 +29,8 @@ export default function Latest() {
     <>
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
-      <div className="pb-40 ml-8">
-        <br></br>
-        <br></br>
+      <div className="pb-40 ml-8 mr-8">
+        <br id="Latest" className="mt-10" />
         <br></br>
         <TrailerList title="Latest trailers" data={trailers} />
       </div>

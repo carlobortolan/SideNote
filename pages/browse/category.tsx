@@ -39,11 +39,12 @@ export default function Category() {
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
 
-      <div className="pb-40 ml-8">
-        <br id="Anime" className="" />
-        <TrailerList title="Anime" data={anime} /> <br />
-        <br id="Adventure" className="" />
-        <TrailerList title="Adventure" data={adventure} /> <br />
+      <div className="pb-40 ml-8 mr-8">
+        <br></br>
+{/* <br id="Anime" className="" /> */}
+        {/* <TrailerList title="Anime" data={anime} /> <br /> */}
+        <br id="Adventure" className="mt-10" />
+        <TrailerList title="Adventure" data={adventure} />
         <br id="Action" className="mt-10" />
         <TrailerList title="Action" data={action} />
         <br id="Crime" className="mt-10" />

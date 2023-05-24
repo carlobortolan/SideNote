@@ -30,11 +30,14 @@ export default function MyList() {
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
 
-      <div className="pb-40 ml-8">
+      <div className="pb-40 ml-8 mr-8">
+        <br id="Adventure" className="mt-10" />
         <br></br>
-        <br></br>
-        <br></br>
-        <TrailerList title="My List" data={favorites} /> <br />
+        <TrailerList
+          title={favorites?.length ? "My List" : "No trailers saved yet ..."}
+          data={favorites}
+        />{" "}
+        <br />
       </div>
     </>
   );

@@ -29,17 +29,23 @@ export default function Search() {
   const router = useRouter();
   const { query } = router.query;
   const { data: results = [] } = useSearch(query as string);
-  
+
   return (
     <>
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
 
-      <div className="pb-40 ml-8">
+      <div className="pb-40 ml-8 mr-8">
+        <br id="Adventure" className="mt-10" />
         <br></br>
-        <br></br>
-        <br></br>
-        <TrailerList title="Search results" data={results} />
+        <TrailerList
+          title={
+            results?.length
+              ? `Search results for '` + query + "'"
+              : `No results found for for '` + query + "'"
+          }
+          data={results}
+        />
       </div>
     </>
   );

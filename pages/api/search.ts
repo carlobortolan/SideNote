@@ -18,13 +18,13 @@ export default async function handler(
     const searchResults = await prismadb.trailer.findMany({
       where: {
         OR: [
-          { title: { contains: query as string } },
-          { description: { contains: query as string } },
-          { genre: { contains: query as string } },
+          { title: { contains: query as string, mode: "insensitive" } },
+          { description: { contains: query as string, mode: "insensitive" } },
+          { genre: { contains: query as string, mode: "insensitive" } },
           { directed_by: { has: query as string } },
           { written_by: { has: query as string } },
           { starring: { has: query as string } },
-          { release_year: { contains: query as string } },
+          { release_year: { contains: query as string, mode: "insensitive" } },
         ],
       },
     });

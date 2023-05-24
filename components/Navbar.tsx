@@ -130,7 +130,7 @@ const Navbar = () => {
             <BsSearch
               className={`disabled ${
                 showSearchMenu
-                  ? "disabled text-gray-0"
+                  ? "disabled text-transparent"
                   : "text-gray-200 hover:text-gray-300 cursor-pointer transition hover:underline hover:translate-y-[-2px] transition-transform duration-200"
               }`}
             />
