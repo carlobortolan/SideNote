@@ -35,7 +35,7 @@ const Footer = () => {
           </ul>
         </div>
         <p className="text-gray-400 text-center text-sm mt-8">
-          &copy; {new Date().getFullYear()} SideNote. All rights reserved.
+          &copy; {new Date().getFullYear()} SideNote.
         </p>
       </div>
     </footer>
