@@ -77,7 +77,7 @@ export default function About() {
           ultimate seducer, keeping you craving for more.
         </p>
         <p className="text-lg text-gray-300 mb-8">
-          Whether you're at home, in transit, or on a corporate jet, SideNote is
+          Whether you&lsquo;re at home, in transit, or on a corporate jet, SideNote is
           always within reach. With support for smartphones, tablets,
           web-browsers, you can let the world of cinema unfold in the palm of
           your hand.
