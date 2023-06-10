@@ -22,8 +22,6 @@ Our interface is a work of art - a visual feast designed to lure you into the ne
 
 Whether you're at home, in transit, or on a corporate jet, SideNote is always within reach. With support for smartphones, tablets, web-browsers, you can let the world of cinema unfold in the palm of your hand.
 
-SideNote is your gateway to the ultimate power play in the attention economy. Step into the realm where trailers reign supreme, and anticipation becomes the currency of success. Prepare for a future where SideNote dominates the attention market, fueling your addiction and leaving you hungry for the next adrenaline rush. Welcome to SideNote, where we take control of your attention, and the world is at our fingertips. Greed is good, my friend, and SideNote is here to prove it.
-
 ## FEATURES
 
 > **NOTE**: _Some of these features have not been implemented yet._
