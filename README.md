@@ -1,6 +1,6 @@
 # [SideNote](https://sidenote.vercel.app)
 
-**A web application to stream trailer for free¹.**
+**A web application to stream trailers for free¹.**
 
 > **NOTE**: **THIS PROJECT IS STILL UNDER DEVELOPMENT.**
 
