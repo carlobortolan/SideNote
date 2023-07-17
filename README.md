@@ -12,7 +12,7 @@ This project is a web application, built using technologies such as the [React](
 
 The application offers OAuth2.0 authentication, allowing users to sign in using their Google or GitHub accounts.
 
-## INTRODUCTION
+<!--## INTRODUCTION
 
 In this fast-paced, attention-starved world, SideNote emerges as the true master of capturing and capitalizing on the elusive human attention span. Forget about wasting time on full-length movies; SideNote is here to serve you the finest, most exhilarating trailers ever conceived.
 
@@ -21,7 +21,7 @@ SideNote delivers an extensive catalog of handpicked trailers, carefully curated
 Our interface is a work of art - a visual feast designed to lure you into the never-ending world of trailer addiction. Prepare to be dazzled by a stunning platform that keeps your attention locked onto the screen. Discover the latest releases, explore trending trailers, and unlock exclusive glimpses behind the scenes. SideNote is the ultimate seducer, keeping you craving for more.
 
 Whether you're at home, in transit, or on a corporate jet, SideNote is always within reach. With support for smartphones, tablets, web-browsers, you can let the world of cinema unfold in the palm of your hand.
-
+-->
 ## FEATURES
 
 > **NOTE**: _Some of these features have not been implemented yet._
