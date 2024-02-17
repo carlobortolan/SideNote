@@ -2,10 +2,12 @@
 
 **A web application to stream trailers for free¹.**
 
-> **NOTE**: **THIS PROJECT IS STILL UNDER DEVELOPMENT.**
+> [!IMPORTANT]
+> As of February 18, 2024, this project has been put on hold and will probably not be worked on or finished in the near future.
 
-> **NOTE**: _This project is used for learning purposes; do not take it too seriously._
->
+> [!NOTE]
+> This project is used for learning purposes; do not take it too seriously.
+
 > ¹ **DISCLAIMER**: _The trailers shown in the app are for demonstration purposes. I don't own any of the videos provided._
 
 This project is a web application, built using technologies such as the [React](https://react.dev/) library, [Tailwind CSS](https://tailwindcss.com/), [Next.js](https://nextjs.org/), [NextAuth](https://next-auth.js.org/), [Prisma](https://www.prisma.io/), and [MongoDB](https://www.mongodb.com/).
@@ -24,7 +26,8 @@ Whether you're at home, in transit, or on a corporate jet, SideNote is always wi
 -->
 ## FEATURES
 
-> **NOTE**: _Some of these features have not been implemented yet._
+> [!NOTE]
+Some of these features have not been implemented yet.
 
 SideNote has the following features:
 
